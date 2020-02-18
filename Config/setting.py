@@ -33,9 +33,9 @@ HEADER = """
 
 PY3 = sys.version_info >= (3,)
 
-DB_TYPE = getenv('db_type', 'SSDB').upper()
+DB_TYPE = getenv('db_type', 'REDIS').upper()
 DB_HOST = getenv('db_host', '127.0.0.1')
-DB_PORT = getenv('db_port', 8888)
+DB_PORT = getenv('db_port', 6379)
 DB_PASSWORD = getenv('db_password', '')
 
 
@@ -66,7 +66,7 @@ PROXY_GETTER = [
 
 """ API config http://127.0.0.1:5010 """
 SERVER_API = {
-    "HOST": "0.0.0.0",  # The ip specified which starting the web API
+    "HOST": "172.16.16.37",  # The ip specified which starting the web API
     "PORT": 5010  # port number to which the server listens to
 }
 
